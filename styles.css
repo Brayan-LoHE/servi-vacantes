@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #007acc;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.vacantes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.vacante-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+}
+
+.vacante-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #007acc;
+}
+
+.vacante-info {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.vacante-info p {
+    margin: 0.5rem 0;
+}
+
+.vacante-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.vacante-info ul li {
+    flex: 1 1 45%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vacante-info ul li::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: cover;
+}
+
+.vacante-info ul li.horario::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/007acc/alarm-clock.png');
+}
+
+.vacante-info ul li.salario::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/007acc/money.png');
+}
+
+.vacante-info ul li.bono::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/007acc/money-bag.png');
+}
+
+.vacante-info ul li.requisito::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/007acc/document.png');
+}
+
+.vacante-info ul li.cuenta::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/007acc/bank-cards.png');
+}
+
+.contacto {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.contacto a {
+    display: inline-block;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.contacto a:hover {
+    background-color: #005a99;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+}
+
+.close-button:hover {
+    background-color: darkred;
+}
+
+footer {
+    background-color: #007acc;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+}
+
+.toggle-button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem auto;
+    display: block;
+    width: 300px;
+    text-align: center;
+}
+
+.toggle-button:hover {
+    background-color: #005a99;
+}
+.whatsapp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25D366; /* Verde WhatsApp */
+    border-radius: 50%; /* Botón redondo */
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-button:hover {
+    transform: none; /* Sin cambios al pasar el mouse */
+    box-shadow: none; /* Sin cambios de sombra */
+}
+.menu-contacto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto; /* Habilita el scroll vertical */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.contacto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.contact-info a img {
+    margin-right: 0.5rem;
+}
+.loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #25D366;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

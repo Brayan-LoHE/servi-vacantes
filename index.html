@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servi-Vacantes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Servi-Vacantes</h1>
+    </header>
+
+    <main>
+        <div class="vacantes-container">
+            <button class="toggle-button" data-target="vacante1" onclick="toggleVacante('vacante1')">Tultipark III</button>
+            <button class="toggle-button" data-target="vacante2" onclick="toggleVacante('vacante2')">Macro II</button>
+            <button class="toggle-button" data-target="vacante3" onclick="toggleVacante('vacante3')">Tultipark II</button>
+            <!-- Ejemplo de vacante -->
+            <div class="vacante-card" id="vacante1">
+                <button class="close-button" onclick="closeVacante('vacante1')">&times;</button>
+                <div class="vacante-header">Oportunidad Laboral</div>
+                <div class="vacante-info">
+                    <p><strong>Zona:</strong> Tultipark III</p>
+                    <p><strong>Horario:</strong> Lunes a Sábado</p>
+                    <ul>
+                        <li class="horario">6:00 a 15:00 hrs</li>
+                        <li class="horario">8:00 a 17:00 hrs</li>
+                    </ul>
+                    <p><strong>Salario:</strong> $1,750 semanales</p>
+                    <ul>
+                        <li class="salario">Turno: $270</li>
+                        <li class="bono">Bonos: $130 semanal por asistencia y puntualidad</li>
+                    </ul>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul>
+                        <li class="requisito">Solicitud elaborada</li>
+                        <li class="requisito">Comprobante de domicilio</li>
+                        <li class="requisito">INE original y copia</li>
+                        <li class="requisito">Acta de nacimiento</li>
+                        <li class="requisito">1 foto tamaño infantil</li>
+                        <li class="cuenta">Cuenta Bancaria (Banamex o BBVA)</li>
+                    </ul>
+                </div>
+                <div class="contacto">
+                    <p><strong>Contáctanos:</strong></p>
+                    <a href="#" onclick="mostrarMenuContacto()">
+                        <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" style="background-color: transparent; border: none;">
+                    </a>
+                </div>
+            </div>
+            <!-- Fin de ejemplo de vacante -->
+            <div class="vacante-card" id="vacante2">
+                <button class="close-button" onclick="closeVacante('vacante2')">&times;</button>
+                <div class="vacante-header">Oportunidad Laboral</div>
+                <div class="vacante-info">
+                    <p><strong>Zona:</strong> Macro II</p>
+                    <p><strong>Horario:</strong> Lunes a Sábado</p>
+                    <ul>
+                        <li class="horario">9:00 a 18:00 hrs</li>
+                    </ul>
+                    <p><strong>Salario:</strong> $1,750 semanales</p>
+                    <ul>
+                        <li class="salario">Turno: $270</li>
+                        <li class="bono">Bonos: $130 semanal por asistencia y puntualidad</li>
+                    </ul>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul>
+                        <li class="requisito">Solicitud elaborada</li>
+                        <li class="requisito">Comprobante de domicilio</li>
+                        <li class="requisito">INE original y copia</li>
+                        <li class="requisito">Acta de nacimiento</li>
+                        <li class="requisito">1 foto tamaño infantil</li>
+                        <li class="cuenta">Cuenta Bancaria (Banamex o BBVA)</li>
+                    </ul>
+                </div>
+                <div class="contacto">
+                    <p><strong>Contáctanos:</strong></p>
+                    <a href="#" onclick="mostrarMenuContacto()">
+                        <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" style="background-color: transparent; border: none;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="vacante-card" id="vacante3">
+                <button class="close-button" onclick="closeVacante('vacante3')">&times;</button>
+                <div class="vacante-header">Oportunidad Laboral</div>
+                <div class="vacante-info">
+                    <p><strong>Zona:</strong> Tultipark II</p>
+                    <p><strong>Horario:</strong> Lunes a Sábado</p>
+                    <ul>
+                        <li class="horario">9:00 a 18:00 hrs</li>
+                    </ul>
+                    <p><strong>Salario:</strong> $1,800 semanales</p>
+                    <ul>
+                        <li class="salario">Turno: $280</li>
+                        <li class="bono">Bonos: $120 semanal por asistencia y puntualidad</li>
+                    </ul>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul>
+                        <li class="requisito">Solicitud elaborada</li>
+                        <li class="requisito">Comprobante de domicilio</li>
+                        <li class="requisito">INE original y copia</li>
+                        <li class="requisito">Acta de nacimiento</li>
+                        <li class="requisito">1 foto tamaño infantil</li>
+                        <li class="cuenta">Cuenta Bancaria (Banamex o BBVA)</li>
+                    </ul>
+                </div>
+                <div class="contacto">
+                    <p><strong>Contáctanos:</strong></p>
+                    <a href="#" onclick="mostrarMenuContacto()">
+                        <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" style="background-color: transparent; border: none;">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de contacto -->
+        <div id="menu-contacto" class="menu-contacto" style="display: none;">
+            <button class="close-button" onclick="cerrarMenuContacto()">&times;</button>
+            <div class="contacto-card">
+                <div class="avatar">
+                    <img src="https://img.icons8.com/ios-filled/100/000000/user-female-circle.png" alt="Mujer">
+                </div>
+                <div class="contact-info">
+                    <p><strong>Brenda Rojas:</strong></p>
+                    <p>56 1883 8835</p>
+                    <a href="https://wa.me/525618838835" target="_blank" class="whatsapp-button">
+                        <img src="https://img.icons8.com/ios-filled/30/FFFFFF/whatsapp.png" alt="WhatsApp">
+                        Enviar Mensaje
+                    </a>
+                </div>
+            </div>
+            <div class="contacto-card">
+                <div class="avatar">
+                    <img src="https://img.icons8.com/ios-filled/100/000000/user-female-circle.png" alt="Mujer">
+                </div>
+                <div class="contact-info">
+                    <p><strong>Angelica Peres:</strong></p>
+                    <p>56-3028-6758</p>
+                    <a href="https://wa.me/525630286758" target="_blank" class="whatsapp-button">
+                        <img src="https://img.icons8.com/ios-filled/30/FFFFFF/whatsapp.png" alt="WhatsApp">
+                        Enviar Mensaje
+                    </a>
+                </div>
+            </div>
+            <div class="contacto-card">
+                <div class="avatar">
+                    <img src="https://img.icons8.com/ios-filled/100/000000/user-female-circle.png" alt="Mujer">
+                </div>
+                <div class="contact-info">
+                    <p><strong>Valeria Ocaña:</strong></p>
+                    <p>55-8233-4935</p>
+                    <a href="https://wa.me/525582334935" target="_blank" class="whatsapp-button">
+                        <img src="https://img.icons8.com/ios-filled/30/FFFFFF/whatsapp.png" alt="WhatsApp">
+                        Enviar Mensaje
+                    </a>
+                </div>
+            </div>
+            <div class="contacto-card">
+                <div class="avatar">
+                    <img src="https://img.icons8.com/ios-filled/100/000000/user-female-circle.png" alt="Mujer">
+                </div>
+                <div class="contact-info">
+                    <p><strong>Lorena Guerrero:</strong></p>
+                    <p>55-8616-3909</p>
+                    <a href="https://wa.me/525586163909" target="_blank" class="whatsapp-button">
+                        <img src="https://img.icons8.com/ios-filled/30/FFFFFF/whatsapp.png" alt="WhatsApp">
+                        Enviar Mensaje
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="loading-spinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+        </div>        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Servi-Vacantes. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
